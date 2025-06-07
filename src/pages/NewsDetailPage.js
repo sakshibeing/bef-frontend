@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Helmet } from 'react-helmet';
 import './NewsDetailPage.css';
-import FooterCTA from '../components/FooterCTA';
 
 
 const NewsDetailPage = () => {
@@ -14,7 +12,8 @@ const NewsDetailPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get(`/api/news/${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/${id}`);
+
         setNewsItem(res.data);
       } catch (err) {
         console.error(err);

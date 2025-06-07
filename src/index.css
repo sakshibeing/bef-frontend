@@ -1,13 +1,132 @@
-body {
+/* Global Reset & Base */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* News Page Layout */
+.news-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Filter Options */
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-options button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.filter-options button.active {
+  background: #0077cc;
+  color: white;
+}
+
+/* Top Story Carousel */
+.top-story-carousel {
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* News List + Sidebar Layout */
+.news-list-sidebar {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* News List */
+.news-list {
+  flex: 3;
+}
+
+.news-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.news-item a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Media Container */
+.media-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-list-sidebar {
+    flex-direction: column;
+  }
+
+  .top-story-carousel {
+    padding: 1rem 0.5rem;
+  }
 }

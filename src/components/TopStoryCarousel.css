@@ -1,0 +1,16 @@
+.top-story-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.top-story-carousel .carousel-item {
+  flex: 0 0 auto;
+  background-color: white;
+  padding: 1rem;
+  min-width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+}

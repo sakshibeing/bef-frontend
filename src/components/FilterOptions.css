@@ -1,0 +1,20 @@
+.filter-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+.filter-options button {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-options button.active {
+  background-color: #007bff;
+  color: white;
+}
