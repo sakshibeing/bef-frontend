@@ -9,6 +9,7 @@ import NewsList from '../components/NewsList';
 import Sidebar from '../components/Sidebar';
 import FooterCTA from '../components/FooterCTA'; // ✅ Only one import
 import './NewsPage.css';
+import Navbar from '../components/Navbar';
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
@@ -27,8 +28,12 @@ const NewsPage = () => {
     }
   };
 
+  
+
   return (
+    
     <div className="news-page">
+      <Navbar/>
       <HeroSection />
       <FilterOptions className="filter-options" selected={filter} onChange={setFilter} />
       <TopStoryCarousel
@@ -48,10 +53,11 @@ const NewsPage = () => {
           },
         ]}
       />
-      <div className="news-list-sidebar">
-        <NewsList className="news-list" items={news} />
-        <Sidebar className="sidebar" />
+     <div className="news-list-sidebar">
+        <NewsList items={news} />
+         <Sidebar />
       </div>
+
 
       {/* ✅ Add FooterCTA component here */}
       <FooterCTA />

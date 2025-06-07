@@ -315,3 +315,29 @@ footer a:hover {
     flex: 0 0 80%;
   }
 }
+.news-list-sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f0f8ff; /* Light blue tone */
+}
+
+/* Let the news list take more space */
+.news-list-sidebar .news-list {
+  flex: 3;
+}
+
+/* Sidebar on the right */
+.news-list-sidebar .sidebar {
+  flex: 1;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.1);
+}
+@media (max-width: 768px) {
+  .news-list-sidebar {
+    flex-direction: column;
+  }
+}
